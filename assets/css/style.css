@@ -1,0 +1,17 @@
+body {
+    font-family: inter, Arial, Helvetica, sans-serif;
+    background-color: rgb(24, 24, 31);
+    color: white;
+}
+
+#projetos {
+    color: rgb(236, 236, 236);
+}
+
+a {
+    color: rgb(116, 112, 112);
+}
+
+#linkedin {
+    color: rgb(255, 255, 255);
+}

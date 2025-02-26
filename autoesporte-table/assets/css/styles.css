@@ -1,0 +1,35 @@
+th {
+
+    background-color: rgb(131, 12, 12);
+}
+
+h1 {
+    height: 70px;
+    color: rgb(245, 245, 245);
+}
+
+a {
+    height: 20px;
+    padding: 2%;
+    color: white;
+
+
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    font-size: large;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    font-family: Tahoma;
+    text-align: justify;
+}
+
+div {
+    position: relative;
+    top: -700px;
+    text-align: right;
+}

@@ -1,0 +1,22 @@
+body {
+    font-family: work sans;
+}
+
+h1 {
+    text-align: center;
+    color: #a18262;
+}
+
+a {
+    color: #864809;
+}
+
+p {
+    color: #a18262;
+}
+
+#logo {
+    border-radius: 60%;
+    display: block;
+    margin: 0 auto;
+}
