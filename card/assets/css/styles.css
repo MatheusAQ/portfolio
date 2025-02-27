@@ -1,0 +1,43 @@
+body {
+    font-family: inter, Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+div.principal {
+    display: block;
+    background-color: rgb(250, 249, 249);
+    border-radius: 10%;
+    margin: 40px 40%;
+    padding: 0;
+    height: 600px;
+    width: 18%;
+    border: 8px double rgb(255, 255, 255);
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+figure img {
+
+    width: 120px;
+    height: 120px;
+    border-radius: 90%;
+    border: 2px solid rgb(24, 24, 24);
+
+}
+
+.texto {
+    text-align: justify;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 40px;
+
+}
+
+.logo {
+    display: flex;
+    margin-right: 40px;
+    padding-left: 20px;
+    height: 40px;
+    width: 40px;
+}
