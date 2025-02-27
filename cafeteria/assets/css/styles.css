@@ -1,10 +1,14 @@
 body {
+    margin-top: 0;
+    padding-top: 0;
     font-family: work sans;
 }
 
 h1 {
     text-align: center;
     color: #a18262;
+
+
 }
 
 a {
@@ -16,7 +20,38 @@ p {
 }
 
 #logo {
+    position: relative;
+    bottom: 75px;
+    left: 10px;
+    height: 80px;
+    width: 80px;
     border-radius: 60%;
-    display: block;
-    margin: 0 auto;
+
 }
+
+header {
+    background-color: rgb(255, 255, 255);
+    height: 80px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+div.menu {
+    position: relative;
+    bottom: 125px;
+    left: 110px;
+}
+
+section.salgados {
+    position: relative;
+    left: 700px;
+    bottom: 160px;
+}
+
+section.doces {
+    position: relative;
+    left: 1300px;
+    bottom: 320px;
+
+}
+
+/* ARRUMAR A FORMA DE MOVER OS TEXTOS PARA FORMA DESEJADA*/
