@@ -36,22 +36,19 @@ header {
 }
 
 div.menu {
-    position: relative;
-    bottom: 125px;
+    position: absolute;
+    top: 40px;
     left: 110px;
 }
 
 section.salgados {
-    position: relative;
+    position: absolute;
     left: 700px;
-    bottom: 160px;
+    top: 160px;
 }
 
 section.doces {
-    position: relative;
+    position: absolute;
     left: 1300px;
-    bottom: 320px;
-
+    top: 160px;
 }
-
-/* ARRUMAR A FORMA DE MOVER OS TEXTOS PARA FORMA DESEJADA*/

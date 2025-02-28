@@ -1,22 +1,32 @@
-th {
-
-    background-color: rgb(131, 12, 12);
+body {
+    margin: 0;
+    padding: 80px 0 0;
 }
 
 h1 {
     height: 70px;
-    color: rgb(245, 245, 245);
+    color: rgb(0, 0, 0);
 }
 
 a {
-    height: 20px;
-    padding: 2%;
-    color: white;
+    color: rgb(155, 9, 9);
+    position: relative;
+    left: 200px;
+    bottom: 80px;
+    padding: 40px;
+}
 
-
+a.aside {
+    color: rgb(155, 9, 9);
+    position: relative;
+    left: 1400px;
+    bottom: 80px;
+    padding: 20px;
 }
 
 h2 {
+    font-family: nunito;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -24,12 +34,41 @@ p {
     font-size: large;
     background-color: rgb(255, 255, 255);
     width: 40%;
-    font-family: Tahoma;
+    font-family: nunito;
     text-align: justify;
 }
 
-div {
-    position: relative;
-    top: -700px;
-    text-align: right;
+div.carro p {
+    font-family: nunito;
+    font-size: 20px;
+    position: absolute;
+    bottom: 500px;
+    left: 300px;
+}
+
+div.carro {
+    position: absolute;
+    left: 1100px;
+    top: 350px;
+}
+
+img.carroantigo {
+    height: 500px;
+    width: 800px;
+}
+
+navbar {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    height: 70px;
+    width: 1900px;
+}
+
+.post {
+    font-family: nunito;
+    padding: 10px;
 }
