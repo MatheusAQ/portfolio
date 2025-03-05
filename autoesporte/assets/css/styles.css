@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 80px 0 0;
+
 }
 
 h1 {
@@ -30,31 +31,34 @@ h2 {
     text-align: center;
 }
 
-p {
+article p {
+    padding: 10px;
     font-size: large;
     background-color: rgb(255, 255, 255);
-    width: 40%;
+    width: 1300px;
     font-family: nunito;
     text-align: justify;
+    align-self: center;
 }
 
 div.carro p {
     font-family: nunito;
     font-size: 20px;
-    position: absolute;
-    bottom: 500px;
-    left: 300px;
+
 }
 
 div.carro {
-    position: absolute;
-    left: 1100px;
-    top: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 img.carroantigo {
-    height: 500px;
-    width: 800px;
+
+    height: 400px;
+    width: 700px;
 }
 
 navbar {
@@ -68,7 +72,12 @@ navbar {
     width: 1900px;
 }
 
-.post {
+article.post {
+    width: 1300px;
+    margin: 0 auto;
+    display: flex;
     font-family: nunito;
     padding: 10px;
+    text-align: left;
+    flex-direction: column;
 }
