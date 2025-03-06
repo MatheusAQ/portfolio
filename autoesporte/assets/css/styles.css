@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    padding: 80px 0 0;
+    padding: px 0 0;
 
 }
 
@@ -17,7 +17,7 @@ a {
     padding: 40px;
 }
 
-a.aside {
+a.menu {
     color: rgb(155, 9, 9);
     position: relative;
     left: 1400px;
@@ -80,4 +80,29 @@ article.post {
     padding: 10px;
     text-align: left;
     flex-direction: column;
+}
+
+main {
+    margin: 50px;
+}
+
+div.navegacao {
+    margin: 0;
+    display: grid;
+    height: 80px;
+    width: 80px;
+    grid-template-columns: 200px;
+    grid-template-rows: 970px;
+}
+
+aside {
+    border: 1px solid black;
+
+}
+
+.navegacao aside ul {
+    text-align: left;
+    padding: 80px 40px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
 }
