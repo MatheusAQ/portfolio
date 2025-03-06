@@ -1,0 +1,59 @@
+body {
+    box-sizing: border-box;
+    grid-template-columns: 350px 4fr;
+    grid-template-rows: 100px 4fr 1fr;
+    grid-template-areas: "header header" "aside main" "footer footer";
+    height: 100vh;
+    display: grid;
+}
+
+header {
+    grid-area: header;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+header div a {
+    margin-left: 80px;
+
+}
+
+aside {
+    color: black;
+    grid-area: aside;
+    background-color: rgb(248, 248, 252);
+    border: 1px solid black;
+}
+
+li {
+    padding-top: 40px;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+li a {
+    color: black;
+}
+
+main {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    grid-area: main;
+    overflow: auto;
+
+}
+
+footer {
+    padding: 10px;
+    grid-area: footer;
+    text-align: center;
+
+}
