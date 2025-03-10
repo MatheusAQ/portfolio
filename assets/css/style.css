@@ -10,6 +10,7 @@ body {
 
 
 .minhafoto {
+    box-shadow: 2px -1px 28px -3px rgba(255, 255, 255, 0.75);
     margin-top: 150px;
     width: 15%;
     border-radius: 40%;
