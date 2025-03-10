@@ -1,4 +1,5 @@
 body {
+    justify-content: center;
     text-align: center;
     font-family: inter, Arial, Helvetica, sans-serif;
     background-color: #3498db;
@@ -6,13 +7,35 @@ body {
 
 }
 
+
+
+.minhafoto {
+    margin-top: 150px;
+    width: 15%;
+    border-radius: 40%;
+}
+
+section.sobremim div {
+    margin-left: 20px;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+section.sobremim {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 500px;
+
+
+    color: rgb(12, 12, 12);
+
+}
+
 .projetos {
-
-    position: relative;
-    top: -150px;
-    right: 200px;
-    color: rgb(0, 0, 0);
-
+    background-color: rgb(255, 255, 255);
 }
 
 a {
@@ -20,20 +43,6 @@ a {
 }
 
 
-
-.minhafoto {
-    position: relative;
-    top: 200px;
-    left: -25%;
-    width: 15%;
-    border-radius: 40%;
-}
-
-header {
-    position: relative;
-    bottom: 100px;
-    color: rgb(12, 12, 12);
-}
 
 .logolinkedin {
     position: relative;
