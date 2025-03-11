@@ -10,8 +10,7 @@ body {
 /* Area inicial com minha foto */
 
 .minhafoto {
-    position: absolute;
-    left: 400px;
+    position: relative;
     transition: 0.3s;
     margin-top: 150px;
     width: 15%;
@@ -105,3 +104,5 @@ a {
         box-shadow: 1px 1px 29px 0px rgba(5, 53, 156, 0.95);
     }
 }
+
+@media screen and (max-width: 1300px) {}
