@@ -6,13 +6,17 @@ body {
 
 }
 
+
 /* Area inicial com minha foto */
 
 .minhafoto {
+    position: absolute;
+    left: 400px;
     transition: 0.3s;
     margin-top: 150px;
     width: 15%;
     border-radius: 40%;
+    animation: sombreamento 2s ease-in-out infinite alternate;
 }
 
 h1 {
@@ -22,12 +26,6 @@ h1 {
 
 
 }
-
-
-.minhafoto:hover {
-    box-shadow: 2px -1px 40px -3px rgba(255, 255, 255, 0.75);
-}
-
 
 section.sobremim {
     justify-content: center;
@@ -54,6 +52,7 @@ section.sobremim div {
     justify-content: center;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 
@@ -92,5 +91,17 @@ a {
 }
 
 .portfolio img:hover {
-    box-shadow: 2px -1px 40px -3px rgba(255, 255, 255, 0.75);
+    box-shadow: 1px 0px 28px -10px rgba(255, 255, 255, 0.75);
+    transform: scale(1.05);
+}
+
+
+@keyframes sombreamento {
+    0% {
+        box-shadow: none;
+    }
+
+    100% {
+        box-shadow: 1px 1px 29px 0px rgba(5, 53, 156, 0.95);
+    }
 }
