@@ -57,6 +57,11 @@ section.bebidas {
 
 }
 
+.tabela {
+    max-width: 100%;
+    overflow: auto;
+}
+
 .flex {
     display: flex;
 
@@ -105,7 +110,7 @@ div.horario {
 
 @media screen and (max-width: 1250px) {
     body {
-        width: 96%;
+        width: 100%vw;
     }
 
     ul {
@@ -129,18 +134,19 @@ div.horario {
     }
 
     section.bebidas img {
+        width: 300px;
         position: relative;
         left: 100px;
     }
 
-    .horario,
-    .flex .tabela {
-        max-width: 100%;
-    }
-
     .flex {
+
         flex-direction: column;
         justify-content: center;
+    }
+
+    div.horario {
+        border: 1px solid black;
     }
 
     .cardapio {
