@@ -124,9 +124,18 @@ div.horario {
         bottom: 0px;
     }
 
+    section.bebidas {
+        width: 100%;
+    }
+
     section.bebidas img {
         position: relative;
         left: 100px;
+    }
+
+    .horario,
+    .flex .tabela {
+        max-width: 100%;
     }
 
     .flex {
