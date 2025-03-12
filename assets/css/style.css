@@ -51,7 +51,9 @@ section.sobremim div {
     justify-content: center;
     align-items: center;
     justify-content: space-around;
+    box-sizing: border-box;
     flex-wrap: wrap;
+
 }
 
 
@@ -106,6 +108,7 @@ a {
 }
 
 @media screen and (max-width: 1300px) {
+
     .minhafoto {
         width: 30%;
 
