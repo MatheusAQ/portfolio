@@ -32,9 +32,11 @@ p {
 }
 
 header {
+    margin: 0;
+    padding: 5px;
     background-color: rgb(255, 255, 255);
     height: 80px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 div.menu {
@@ -50,6 +52,7 @@ section.bebidas {
 }
 
 .cardapio {
+    padding: 5px;
     border: 2px solid black;
     box-shadow: 0px 5px 5px #646262;
     height: 550px;
@@ -134,19 +137,30 @@ div.horario {
     }
 
     section.bebidas img {
-        width: 300px;
+        width: 80%;
+        height: 40%;
         position: relative;
-        left: 100px;
+        left: 50px;
+    }
+
+    section.salgados img {
+        width: 80%;
+        height: 40%;
+        position: relative;
+        left: 50px;
+    }
+
+    section.doces img {
+        width: 60%;
+        height: 40%;
+        position: relative;
+        left: 50px;
     }
 
     .flex {
 
         flex-direction: column;
         justify-content: center;
-    }
-
-    div.horario {
-        border: 1px solid black;
     }
 
     .cardapio {
