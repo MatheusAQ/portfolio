@@ -50,6 +50,14 @@ main {
     height: 0px;
 }
 
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 220px;
+}
+
 article.topo {
     border: 2px solid black;
     padding-left: 10px;
@@ -66,4 +74,25 @@ h3 {
     padding: 10px;
     width: 40%;
     height: 10%;
+}
+
+@media screen and (max-width: 1500px) {
+    aside {
+        display: none;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 120px 40px;
+    }
+
+    .imgrede {
+        padding: 10px;
+        width: 70%;
+        height: 10%;
+        text-align: center;
+    }
 }

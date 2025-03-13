@@ -21,15 +21,35 @@ h2 {
 }
 
 p {
+    display: inline-block;
     font-size: large;
     background-color: rgb(255, 255, 255);
-    width: 40%;
     font-family: Tahoma;
     text-align: justify;
+    margin-left: 40px;
 }
 
-div {
-    position: relative;
-    top: -700px;
-    text-align: right;
+.post {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.imagem {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 40vw;
+    height: 20vw;
+}
+
+@media screen and (max-width: 1000px) {
+    img {
+        width: 80vw;
+        height: 40vw;
+    }
+
 }
