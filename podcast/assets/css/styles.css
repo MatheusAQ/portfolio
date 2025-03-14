@@ -2,3 +2,10 @@ body {
     text-align: center;
     background-color: #c6c6c6;
 }
+
+@media screen and (max-width: 857px) {
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
