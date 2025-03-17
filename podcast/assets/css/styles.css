@@ -3,6 +3,36 @@ body {
     background-color: #c6c6c6;
 }
 
+h2 {
+    display: block;
+    opacity: 50%;
+
+}
+
+h2:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+img {
+    cursor: pointer;
+    animation: flutuar 2s ease-in-out infinite alternate;
+
+}
+
+@keyframes flutuar {
+    0% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: 80px;
+    }
+
+}
+
+
+
 @media screen and (max-width: 857px) {
     iframe {
         width: 100%;

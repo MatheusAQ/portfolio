@@ -9,16 +9,38 @@ body {
 h1 {
     text-align: center;
     color: #a18262;
+    opacity: 70%;
+    transition: 0.3s;
 
 
 }
 
 a {
+    display: inline-block;
     color: #864809;
+    opacity: 60%;
+    transition: 0.3s;
+}
+
+h1:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+a:hover {
+    opacity: 100%;
+    transform: scale(1.05);
 }
 
 p {
     color: #a18262;
+    opacity: 70%;
+    transition: 0.3s;
+}
+
+p:hover {
+    opacity: 100%;
+    cursor: pointer;
 }
 
 #logo {
@@ -28,6 +50,7 @@ p {
     height: 80px;
     width: 80px;
     border-radius: 60%;
+
 
 }
 
@@ -52,7 +75,7 @@ section.bebidas {
 }
 
 .cardapio {
-    padding: 5px;
+    padding: 2px;
     border: 2px solid black;
     box-shadow: 0px 5px 5px #646262;
     height: 550px;
