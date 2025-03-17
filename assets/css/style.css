@@ -110,7 +110,19 @@ a {
 @media screen and (max-width: 1300px) {
 
     .minhafoto {
-        width: 30%;
+        width: 50%;
+        position: relative;
+        transition: 0.3s;
+        margin-top: 80px;
+        border-radius: 40%;
+        animation: sombreamento 2s ease-in-out infinite alternate;
+    }
 
+    section.sobremim div {
+        margin-left: 20px;
+        margin-top: 100px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
     }
 }
