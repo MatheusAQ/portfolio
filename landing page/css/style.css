@@ -1,0 +1,17 @@
+div.titulo {
+    font-size: 60px;
+    font-family: "Sour Gummy", sans-serif;
+
+}
+
+div.subtitulo {
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 40px;
+    color: rgb(255, 0, 0);
+}
+
+div.servicos {
+    font-size: 20px;
+    height: 600px;
+    padding: 40px;
+}
