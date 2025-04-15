@@ -7,3 +7,15 @@
     align-items: center;
 
 }
+
+.titulo {
+    font-family: "Roboto Slab", serif;
+    opacity: 80%;
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.titulo:hover {
+    opacity: 100%;
+}
