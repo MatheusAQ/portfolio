@@ -9,51 +9,50 @@ body {
 
 /* Area inicial com minha foto */
 
+
 .minhafoto {
-    position: relative;
-    transition: 0.3s;
-    margin-top: 150px;
-    width: 15%;
-    border-radius: 40%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
     animation: sombreamento 2s ease-in-out infinite alternate;
+    box-shadow: 0 0 20px #0040ff88;
 }
 
-h1 {
-    position: absolute;
-    text-align: center;
-    top: 70px;
 
-
+section.sobremim h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 section.sobremim {
-    justify-content: center;
-    align-items: center;
     display: flex;
-    height: 500px;
-
-    color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
 
 }
 
 section.sobremim div {
-    margin-left: 20px;
-    margin-top: 70px;
-    display: flex;
-    flex-direction: column;
+    max-width: 500px;
 
 }
 
 
 /* AREA DOS PROJETOS */
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
-    box-sizing: border-box;
-    flex-wrap: wrap;
 
+.flex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    max-width: 880px;
+    margin: 0 auto;
 }
 
 
@@ -110,19 +109,12 @@ a {
 @media screen and (max-width: 1300px) {
 
     .minhafoto {
-        width: 50%;
-        position: relative;
-        transition: 0.3s;
-        margin-top: 80px;
-        border-radius: 40%;
-        animation: sombreamento 2s ease-in-out infinite alternate;
+        width: 150px;
+        height: 150px;
     }
 
     section.sobremim div {
-        margin-left: 20px;
-        margin-top: 100px;
-        padding: 10px;
-        display: flex;
         flex-direction: column;
+        text-align: center;
     }
 }
