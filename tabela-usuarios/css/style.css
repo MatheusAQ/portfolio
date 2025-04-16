@@ -1,10 +1,5 @@
 .botoes {
     display: flex;
     justify-content: center;
-}
-
-.visualizar,
-.excluir,
-.editar {
-    margin-right: 10px;
+    gap: 10px;
 }

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Painel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="alert alert-primary text-center" id="alerta" role="alert">
+        Seja bem vindo!
+    </div>
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Vapor</a>
+            <div class="collapse navbar-collapse ms-5" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-5">
+                        <a class="nav-link active" aria-current="page" href="#">Biblioteca</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" href="#">Loja</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" href="#">Comunidades</a>
+                    </li>
+
+                </ul>
+
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success me-4" type="submit">Buscar</button>
+                </form>
+                <button type="button" class="btn btn-primary">
+                    Notifications <span class="badge text-bg-secondary">4</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Cards -->
+    <div class="container mt-5 d-flex justify-content-center gap-4 flex-wrap">
+
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="./image/overcooked2.png" class="img-fluid img-card-fixa rounded-start pt-3" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">OVERCOOKED! 2</h5>
+                        <p class="card-text">O Overcooked voltou trazendo mais caos para a cozinha! Volte para o Reino
+                            da Cebola e monte sua equipe de chefs.
+                        </p>
+                        <button type="button" class="btn btn-primary">Comprar</button>
+                        <p class="card-text"><small class="text-body-secondary"><a href="#">Ver
+                                    detalhes</a></small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="./image/a plague tale.jpg" class="img-fluid img-card-fixa rounded-start pt-3" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">A Plague Tale: Requiem</h5>
+                        <p class="card-text">No mar distante, uma ilha chama você...
+                            Embarque em uma comovente jornada por um cativante mundo brutal.
+                            .</p>
+                        <button type="button" class="btn btn-primary">Comprar</button>
+                        <p class="card-text"><small class="text-body-secondary"><a href="#">Ver
+                                    detalhes</a></small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="./image/team froterereer.jpg" class="img-fluid img-card-fixa rounded-start pt-3"
+                        alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Team Fortress 2</h5>
+                        <p class="card-text">Há centenas de armas, chapéus e mais para colecionar, fabricar, comprar e
+                            trocar. Ajuste a sua classe favorita para se encaixar no seu estilo de jogo e gosto pessoal.
+                        </p>
+                        <button type="button" class="btn btn-primary">Comprar</button>
+                        <p class="card-text"><small class="text-body-secondary"><a href="#">Ver
+                                    detalhes</a></small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="./image/Baldur's_Gate_III_Larian_Studios_key_art.png"
+                        class="img-fluid img-card-fixa rounded-start pt-3" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Baldur's Gate 3</h5>
+                        <p class="card-text">
+                            Reúna seu grupo e volte aos Reinos Esquecidos em uma história de amizade e traição,
+                            sacrifício e sobrevivência, e tentação pelo poder absoluto..</p>
+                        <button type="button" class="btn btn-primary">Comprar</button>
+                        <p class="card-text"><small class="text-body-secondary"><a href="#">Ver
+                                    detalhes</a></small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script>
+        const alertaJS = document.getElementById("alerta");
+        setTimeout(function () {
+            alertaJS.classList.add("d-none")
+        }, 4000);
+
+    </script>
+</body>
+
+</html>
