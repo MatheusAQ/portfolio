@@ -1,0 +1,36 @@
+body {
+    background-color: blue;
+    color: white;
+    font-family: "Oswald", sans-serif;
+}
+
+h1 {
+    font-size: 80px;
+    animation: mudaCor 4s infinite ease-in-out;
+}
+
+h2 {
+    color: rgb(173, 226, 217);
+    font-size: 40px;
+
+}
+
+@keyframes mudaCor {
+    0% {
+        color: #ffffff;
+    }
+
+
+    25% {
+        color: #c4f3b1;
+    }
+
+
+    50% {
+        color: #e4f3bb;
+    }
+
+    100% {
+        color: #ffffff;
+    }
+}
