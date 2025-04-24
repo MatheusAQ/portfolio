@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automação de luzes</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark text-light">
+
+    <h1 class="text-center mt-5">Automação de Luzes</h1>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center text-center">
+
+            <div class="col-md-4 mb-4">
+                <div id="quarto" class="comodo desligado">
+                    <h4>Quarto</h4>
+                    <p id="status-quarto">Luz desligada</p>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-success" data-comodo="quarto" data-status="ligar">Ligar</button>
+                    <button class="btn btn-danger" data-comodo="quarto" data-status="desligar">Desligar</button>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div id="cozinha" class="comodo desligado">
+                    <h4>Cozinha</h4>
+                    <p id="status-cozinha">Luz desligada</p>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-success" data-comodo="cozinha" data-status="ligar">Ligar</button>
+                    <button class="btn btn-danger" data-comodo="cozinha" data-status="desligar">Desligar</button>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div id="sala" class="comodo desligado">
+                    <h4>Sala</h4>
+                    <p id="status-sala">Luz desligada</p>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-success" data-comodo="sala" data-status="ligar">Ligar</button>
+                    <button class="btn btn-danger" data-comodo="sala" data-status="desligar">Desligar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./luzes.js"></script>
+
+</body>
+
+</html>

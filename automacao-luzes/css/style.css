@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin: 80px;
+
+}
+
+.comodo {
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(168, 164, 164);
+    color: blue;
+    height: 80px;
+    min-width: 80px;
+}
