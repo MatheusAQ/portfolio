@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="taskGerenciamento" lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento Usuarios Da escola</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body ng-controller="AppController">
+    <h1 ng-bind="mensagem"></h1>
+    <div class="dados">
+        <p>Nome: <span ng-bind="usuario.nome"></span></p>
+        <p>Tipo: <span ng-bind="usuario.tipo"></span></p>
+    </div>
+
+    <div class="foto" ng-if="usuario.tipo === 'Aluno' ">
+        <img src="./assets/image/aluno.jpg" alt="">
+    </div>
+
+    <div class="foto" ng-if="usuario.tipo === 'Professor' ">
+        <img src="./assets/image/professor.jpg" alt="">
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

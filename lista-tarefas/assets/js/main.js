@@ -1,13 +1,48 @@
 const app = angular.module("taskModule", []);
 
-app.controller("TaskController", function ($scope) {
+app.controller("TaskController", function ($scope, $filter) {
     $scope.modalActive = false;
+    $scope.showCompletedOnly = false;
+    $scope.showIncompletedOnly = false;
+    $scope.showTodayOnly = false;
+    $scope.today = new Date().toLocaleDateString();
     $scope.tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
     $scope.taskInput = {
         title: "",
         date: "",
     };
 
+    $scope.filteredTasks = function () {
+        let filtered = $filter('filter')(
+            $filter('filter')($scope.tasks,
+                $scope.showCompletedOnly ? { checked: true } : {}
+
+            ),
+            $scope.showIncompletedOnly ? { checked: false } : {}
+        );
+
+        if ($scope.showTodayOnly) {
+            const start = new Date()
+            start.setHours(0);
+            start.setMinutes(0);
+            start.setSeconds(0);
+            start.setMilliseconds(0);
+            const end = new Date()
+            end.setHours(23);
+            end.setMinutes(59);
+            end.setSeconds(59);
+            end.setMilliseconds(999);
+            filtered = filtered.filter((task) => {
+                const date = new Date(task.date)
+                return (
+                    date.getTime() >= start.getTime() && date.getTime() <= end.getTime()
+                );
+            });
+
+        }
+
+        return filtered;
+    };
 
     $scope.togglemodal = () => {
         $scope.modalActive = !$scope.modalActive;
@@ -22,7 +57,6 @@ app.controller("TaskController", function ($scope) {
             id: Math.random().toString(36).substring(2, 9),
             title: title,
             date: date,
-            dateStr: date.toLocaleDateString(),
 
         });
 
