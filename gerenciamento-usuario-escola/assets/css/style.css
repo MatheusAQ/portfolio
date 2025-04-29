@@ -10,18 +10,21 @@ body {
 
 h1 {
     margin-top: 40px;
+    margin-bottom: 40px;
     text-align: center;
     font-size: 40px;
 }
 
-div.dados {
-    margin-top: 40px;
+div.filtro {
     display: flex;
-    justify-content: center;
-    text-align: center;
     gap: 10px;
-    font-size: 30px;
-    flex-direction: row;
+
+}
+
+div.dados {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .foto {
