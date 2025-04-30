@@ -16,8 +16,9 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body ng-app="taskGerenciamento">
+<body>
     <h1 ng-controller="AppController" ng-bind="mensagem"></h1>
+
 
     <div class="controlador da lista" ng-controller="ListaController">
         <div class="filtro container">
@@ -47,34 +48,110 @@
             <input type="text" class="form-control" placeholder="Buscar por nome..." ng-model="filtro">
         </div>
         <div class="dados">
+
             <table class="table container table-light table-borderless table.striped table-hover">
                 <thead class="table-dark">
                     <tr>
                         <th scope="col">Nome</th>
                         <th scope="col">Tipo</th>
                         <th scope="col">Data</th>
+                        <th scope="col">Editar</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="usuarios in usuarios | filter:{tipo: filtroSelecionado} | filter:filtro">
-                        <td scope="row">{{usuarios.nome | uppercase}}</td>
-                        <td>{{usuarios.tipo | uppercase}}</td>
-                        <td>{{usuarios.dataCadastro | date:'dd/MM/yyyy' }}</td>
+                    <tr ng-repeat="usuario in usuarios | filter:{tipo: filtroSelecionado} | filter:filtro">
+                        <td scope="row">{{usuario.nome | uppercase}}</td>
+                        <td>{{usuario.tipo | uppercase}}</td>
+                        <td>{{usuario.dataCadastro | date:'dd/MM/yyyy' }}</td>
+                        <td>
+                            <button class="btn btn-danger" ng-click="removerUsuario(usuarios)">Remover Usuário</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
+
         </div>
         <div class="container">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalUsuario">
+                Adicionar Usuário
+            </button>
+
+            <div class="modal" id="modalUsuario" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Adicionar Usuário</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form name="formUsuario" ng-submit="salvarUsuario()" novalidate>
+                                <div class="mb-3">
+
+                                    <label for="nome" class="form-label">Nome</label>
+                                    <input type="text" name="nome" class="form-control" id="nome"
+                                        ng-model="novoUsuario.nome" required>
+                                    <small class="text-danger d-block mt-1"
+                                        ng-show="formUsuario.nome.$error.required && formUsuario.nome.$touched">
+                                        Nome obrigatório.
+                                    </small>
+
+                                    <label for="email">Email</label>
+                                    <input name="email" type="email" class="form-control" id="email"
+                                        ng-model="novoUsuario.email" required>
+                                    <small class="text-danger d-block mt-1"
+                                        ng-show="formUsuario.email.$error.required  && formUsuario.email.$touched">
+                                        Email obrigatório.
+                                    </small>
+
+                                    <label for="tipo" class="form-label">Tipo</label>
+                                    <select name="tipo" class="form-control" id="tipo" ng-model="novoUsuario.tipo"
+                                        required>
+                                        <option value="Professor">Professor</option>
+                                        <option value="Aluno">Aluno</option>
+                                    </select>
+                                    <small class="text-danger d-block mt-1"
+                                        ng-show="formUsuario.tipo.$error.required  && formUsuario.tipo.$touched">
+                                        Tipo obrigatório.
+                                    </small>
+                                    <div ng-show="salvando" class="text-center my-2 text-primary">
+                                        <span class="spinner-border spinner-border-sm" role="status"></span>
+                                        Carregando...
+                                    </div>
+                                    <div class="alert alert-success mt-3" ng-show="sucesso">
+                                        {{ sucesso }}
+                                    </div>
+
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary"
+                                ng-disabled="formUsuario.$invalid || salvando">
+                                {{ salvando ? 'Salvando...' : 'Salvar' }}
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container mt-4">
             <p>Alunos: {{ (usuarios | filter:{tipo:'Aluno'}).length }}</p>
             <p>Professores: {{ (usuarios | filter:{tipo:'Professor'}).length }}</p>
         </div>
+
     </div>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/user.service.js"></script>
 </body>
 
 </html>

@@ -4,37 +4,34 @@ app.controller('AppController', function ($scope) {
     $scope.mensagem = "Bem vindo ao sistema de cadastro escolar"
 })
 
-app.controller('ListaController', function ($scope) {
+app.controller('ListaController', function ($scope, UsuarioService) {
     $scope.filtroSelecionado = "";
-
-    $scope.usuarios = [
-        {
-            nome: "João Silva",
-            tipo: "Professor",
-            dataCadastro: new Date(),
-        },
-        {
-            nome: "Pedro Santos",
-            tipo: "Aluno",
-            dataCadastro: new Date(),
-        },
-        {
-            nome: "Lucas Bento",
-            tipo: "Professor",
-            dataCadastro: new Date(),
-        },
-        {
-            nome: "Guilherme Costa",
-            tipo: "Aluno",
-            dataCadastro: new Date(),
-        },
-        {
-            nome: "Matheus Albuquerque",
-            tipo: "Professor",
-            dataCadastro: new Date(),
-        },
-
-    ]
+    $scope.filtro = "";
+    $scope.usuarios = UsuarioService.listar();
+    $scope.novoUsuario = {};
+    $scope.salvando = false;
+    $scope.sucesso = "";
 
 
-})
+    $scope.salvarUsuario = function () {
+
+        if ($scope.salvando) return;
+
+        $scope.salvando = true;
+        $scope.sucesso = "";
+
+        UsuarioService.salvar($scope.novoUsuario).then(function () {
+            $scope.usuarios = UsuarioService.listar();
+            $scope.novoUsuario = {};
+            $scope.sucesso = "Usuário salvo com sucesso!";
+            $scope.salvando = false;
+            $scope.$apply()
+
+
+        });
+    };
+
+    $scope.removerUsuario = function (usuario) {
+        UsuarioService.remover(usuario);
+    };
+});
