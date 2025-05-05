@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="weatherApp" lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do tempo</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="weatherController">
+    <section class="card" ng-class="{'active': cardActive}">
+        <h1>{{cityName}}</h1>
+        <img ng-if="iconUrl" class="icon" ng-src="{{iconUrl}}" alt="clouds">
+        <h2>{{temperature}}</h2>
+        <div class="min-max">
+            <p class="feels-like">Sensação térmica de <span>{{feelsLike}}°</span></p>
+            <p>Max: <span class="max">{{maxTemperature}}°</span></p>
+            <p>Min: <span class="min">{{minTemperature}}°</span></p>
+        </div>
+        <p class="humidity">Umidade <span>{{humidity}}%</span></p>
+        <div class="wind">
+            <img ng-style="{'transform': 'rotate('+windOrientation+'deg)'}" src="./assets/img/seta.png"
+                alt="seta que representa a direção do vento">
+            <p>
+                velocidade do vento: <span>{{windVelocity}}m/s</span>
+            </p>
+        </div>
+    </section>
+    <section class="input">
+        <input type="text" placeholder="Busque uma cidade" ng-model="city">
+        <button type="button" ng-click="callApi()">Buscar</button>
+    </section>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
